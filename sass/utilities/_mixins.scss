@@ -1,0 +1,70 @@
+$hero-title-map: (
+  mobile: (
+    font-size: 40px,
+    line-height: 44px,
+    font-weight: 900,
+  ),
+  tablet: (
+    font-size: 48px,
+    line-height: 48px,
+    font-weight: 900,
+  ),
+  desktop: (
+    font-size: 64px,
+    line-height: 64px,
+    font-weight: 900,
+  ),
+);
+$title-map: (
+  mobile: (
+    font-size: 32px,
+    line-height: 36px,
+    font-weight: 900,
+  ),
+  big: (
+    font-size: 40px,
+    line-height: 44px,
+    font-weight: 900,
+  ),
+);
+$paragraph-map: (
+  small: (
+    font-size: 16px,
+    line-height: 26px,
+    font-weight: 500,
+    color: $color-gray,
+  ),
+  desktop: (
+    font-size: 18px,
+    line-height: 26px,
+    font-weight: 500,
+    color: $color-gray,
+  ),
+);
+@mixin hero-title-style($type) {
+  $styles: map-get($hero-title-map, $type);
+  font-size: map-get($styles, font-size);
+  line-height: map-get($styles, line-height);
+  font-weight: map-get($styles, font-weight);
+}
+@mixin title-style($type) {
+  $styles: map-get($title-map, $type);
+  font-size: map-get($styles, font-size);
+  line-height: map-get($styles, line-height);
+  font-weight: map-get($styles, font-weight);
+}
+@mixin subtitle-style {
+  font-size: 16px;
+  font-weight: 900;
+  color: $color-blue;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 26px;
+}
+@mixin paragraph-style($type) {
+  $styles: map-get($paragraph-map, $type);
+  font-size: map-get($styles, font-size);
+  line-height: map-get($styles, line-height);
+  font-weight: map-get($styles, font-weight);
+  color: map-get($styles, color);
+}

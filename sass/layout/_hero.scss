@@ -1,0 +1,104 @@
+.hero {
+  display: grid;
+  margin-bottom: 64px;
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: auto 540px auto;
+    height: 358px;
+    margin-bottom: 110px;
+  }
+  &__image--1 {
+    background-image: url("../../assets/mobile/image-hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 153px;
+    margin-bottom: 48px;
+    @media (min-width: 768px) {
+      background-image: url("../../assets/tablet/image-hero.png");
+      height: 303px;
+      background-size: 107%;
+      margin-bottom: 72px;
+    }
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+  &__image--2 {
+    @media (min-width: 1440px) {
+      background-image: url("../../assets/desktop/image-hero-left.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      height: 303px;
+      align-self: start;
+      transform: translateX(-7%);
+    }
+  }
+  &__content {
+    text-align: center;
+    @media (min-width: 1440px) {
+      align-self: end;
+      transform: translateY(-7px);
+    }
+    &__title {
+      @include hero-title-style(mobile);
+      padding: 0 50px;
+      margin-bottom: 24px;
+      @media (min-width: 768px) {
+        @include hero-title-style(tablet);
+        padding: 0 210px;
+      }
+      @media (min-width: 1440px) {
+        @include hero-title-style(desktop);
+        padding: 0 40px;
+        margin-bottom: 34px;
+      }
+    }
+    &__paragraph {
+      @include paragraph-style(small);
+      padding: 0 20px;
+      margin-bottom: 32px;
+      @media (min-width: 768px) {
+        padding: 0 180px;
+      }
+      @media (min-width: 1440px) {
+        @include paragraph-style(desktop);
+        padding: 0;
+      }
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      .button--blue {
+        width: 193px;
+        span {
+          color: $color-light-blue;
+          margin-left: 5px;
+        }
+      }
+      .button--purple {
+        width: 139px;
+      }
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+      }
+      @media (min-width: 1440px) {
+      }
+    }
+  }
+  &__image--3 {
+    @media (min-width: 1440px) {
+      background-image: url("../../assets/desktop/image-hero-right.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      height: 303px;
+      align-self: end;
+      transform: translateX(20%);
+    }
+  }
+}

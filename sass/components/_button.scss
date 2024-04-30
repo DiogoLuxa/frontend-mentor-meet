@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 29px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 26px;
+  text-decoration: none;
+}
+.button--blue {
+  background-color: $color-blue;
+  color: $color-white;
+  &:hover {
+    background-color: $color-blue-hover;
+  }
+}
+.button--purple {
+  background-color: $color-purple;
+  color: $color-white;
+  &:hover {
+    background-color: $color-purple-hover;
+  }
+}
